@@ -12,7 +12,7 @@ hour = st.slider("Select Hour of the Day", 0, 23, 12)
 
 # Dynamic Pricing Logic
 if 18 <= hour <= 22:
-    price = 8  # Peak price
+    price = 20 # Peak price
     peak_status = "Peak Hour"
 else:
     price = 4  # Normal price
@@ -63,5 +63,6 @@ log_data = {
 
 df = pd.DataFrame([log_data])
 df.to_csv("energy_log.csv", mode='a', header=False, index=False)
+
 
 st.success("System Running on Cloud Platform")
